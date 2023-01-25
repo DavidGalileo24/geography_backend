@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Languaje extends Model
 {
     use HasFactory;
+
+    /*Relationships */
+    public function countries(){
+        return $this->belongsToMany(Country::class);
+    }
 }
