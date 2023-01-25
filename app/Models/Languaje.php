@@ -9,6 +9,12 @@ class Languaje extends Model
 {
     use HasFactory;
 
+
+    protected $fillable = [
+        'languaje_name'
+    ];
+
+
     /*Relationships */
     public function countries(){
         return $this->belongsToMany(Country::class);

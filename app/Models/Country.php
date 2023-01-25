@@ -34,4 +34,9 @@ class Country extends Model
     public function currencies(){
         return $this->belongsToMany(Currency::class, 'country_currency');
     }
+
+    /*Pholimorphyc relationship */
+    public function images(){
+        return $this->morphMany(Image::class, 'imageable');
+    }
 }

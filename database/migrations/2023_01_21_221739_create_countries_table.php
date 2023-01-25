@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->decimal('total_population', 11,2);
             $table->string('capital');
+            $table->string('demonym');
             $table->foreignId('continent_id')->constrained();
             $table->foreignId('languaje_id')->constrained();
             $table->foreignId('religion_id')->constrained();
