@@ -15,12 +15,8 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('imageable_id')->constrained();
-            $table->string('imageable_type');
             $table->string('file');
-            $table->string('title');
-            $table->string('description');
-            $table->string('select_image')->nullable();
+            $table->morphs('imageable');
             $table->timestamps();
         });
     }

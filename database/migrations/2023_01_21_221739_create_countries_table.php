@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('total_population', 11,2);
+            $table->integer('total_population');
             $table->string('capital');
             $table->string('demonym');
             $table->foreignId('continent_id')->constrained();
