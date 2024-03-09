@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Languaje;
 use App\Http\Requests\StoreLanguajeRequest;
 use App\Http\Requests\UpdateLanguajeRequest;
+use App\Models\Languaje;
 
 class LanguajeController extends Controller
 {
@@ -31,7 +31,6 @@ class LanguajeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreLanguajeRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreLanguajeRequest $request)
@@ -42,7 +41,6 @@ class LanguajeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Languaje  $languaje
      * @return \Illuminate\Http\Response
      */
     public function show(Languaje $languaje)
@@ -53,7 +51,6 @@ class LanguajeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Languaje  $languaje
      * @return \Illuminate\Http\Response
      */
     public function edit(Languaje $languaje)
@@ -64,8 +61,6 @@ class LanguajeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateLanguajeRequest  $request
-     * @param  \App\Models\Languaje  $languaje
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateLanguajeRequest $request, Languaje $languaje)
@@ -76,7 +71,6 @@ class LanguajeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Languaje  $languaje
      * @return \Illuminate\Http\Response
      */
     public function destroy(Languaje $languaje)

@@ -9,20 +9,19 @@ class Continent extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
-        'continent_name'
+        'continent_name',
     ];
 
-
-
     /*Relationships */
-    public function country(){
+    public function country()
+    {
         return $this->hasMany(Country::class);
     }
 
     /*Pholimorphyc relationship */
-    public function images(){
+    public function images()
+    {
         return $this->morphMany(Image::class, 'imageable');
     }
 }

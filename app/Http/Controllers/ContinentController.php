@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Continent;
 use App\Http\Requests\StoreContinentRequest;
 use App\Http\Requests\UpdateContinentRequest;
+use App\Models\Continent;
 
 class ContinentController extends Controller
 {
@@ -31,7 +31,6 @@ class ContinentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreContinentRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreContinentRequest $request)
@@ -42,7 +41,6 @@ class ContinentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Continent  $continent
      * @return \Illuminate\Http\Response
      */
     public function show(Continent $continent)
@@ -53,7 +51,6 @@ class ContinentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Continent  $continent
      * @return \Illuminate\Http\Response
      */
     public function edit(Continent $continent)
@@ -64,8 +61,6 @@ class ContinentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateContinentRequest  $request
-     * @param  \App\Models\Continent  $continent
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateContinentRequest $request, Continent $continent)
@@ -76,7 +71,6 @@ class ContinentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Continent  $continent
      * @return \Illuminate\Http\Response
      */
     public function destroy(Continent $continent)

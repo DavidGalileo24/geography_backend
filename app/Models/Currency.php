@@ -9,15 +9,13 @@ class Currency extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
-        'name', 'value'
+        'name', 'value',
     ];
 
-
-
     /*Relationships */
-    public function countries(){
+    public function countries()
+    {
         return $this->belongsToMany(Country::class);
     }
 }

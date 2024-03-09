@@ -9,15 +9,13 @@ class Religion extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
-        'religion_name'
+        'religion_name',
     ];
 
-
-
     /*Relationships */
-    public function countries(){
+    public function countries()
+    {
         return $this->belongsToMany(Country::class);
     }
 }
