@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('file');
             $table->morphs('imageable');
+            $table->string('category')->nullable();
             $table->timestamps();
         });
     }
