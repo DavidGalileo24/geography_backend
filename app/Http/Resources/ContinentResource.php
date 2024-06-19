@@ -18,6 +18,7 @@ class ContinentResource extends JsonResource
             'id' => $this->id,
             'continent_name' => $this->continent_name,
             'map' => ImageResource::collection($this->images),
+            'description' => $this->description
         ];
     }
 }

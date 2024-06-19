@@ -19,6 +19,8 @@ class CountryResource extends JsonResource
             'name' => $this->name,
             'total_population' => $this->total_population,
             'capital' => $this->capital,
+            'demonym' => $this->demonym,
+            'description' => $this->description,
             'continent' => ContinentResource::collection($this->continent),
             'languaje' => LanguajeResource::collection($this->languaje),
             'religion' => ReligionResource::collection($this->religion),

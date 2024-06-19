@@ -10,7 +10,7 @@ class Languaje extends Model
     use HasFactory;
 
     protected $fillable = [
-        'languaje_name',
+        'languaje_name', 'description',
     ];
 
     /*Relationships */

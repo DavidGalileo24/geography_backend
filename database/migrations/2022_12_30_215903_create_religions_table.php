@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('religions', function (Blueprint $table) {
             $table->id();
             $table->string('religion_name');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

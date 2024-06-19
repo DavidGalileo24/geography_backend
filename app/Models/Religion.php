@@ -10,7 +10,7 @@ class Religion extends Model
     use HasFactory;
 
     protected $fillable = [
-        'religion_name',
+        'religion_name', 'description', 
     ];
 
     /*Relationships */
