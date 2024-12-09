@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreContinentRequest;
 use App\Http\Requests\UpdateContinentRequest;
+use App\Http\Resources\ContinentResource;
 use App\Models\Continent;
 
 class ContinentController extends Controller
@@ -15,18 +16,10 @@ class ContinentController extends Controller
      */
     public function index()
     {
-        //
+        $data = Continent::orderBy('id', 'desc')->get();
+        return ContinentResource::collection($data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +28,11 @@ class ContinentController extends Controller
      */
     public function store(StoreContinentRequest $request)
     {
-        //
+        $data = Continent::create([
+            'continent_name' => $request->continent_name,
+            'description' => $request->description,
+        ]);
+        return new ContinentResource($data);
     }
 
     /**
@@ -45,18 +42,9 @@ class ContinentController extends Controller
      */
     public function show(Continent $continent)
     {
-        //
+        return ContinentResource::make($continent);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Continent $continent)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -65,7 +53,11 @@ class ContinentController extends Controller
      */
     public function update(UpdateContinentRequest $request, Continent $continent)
     {
-        //
+        $data = $continent->update([
+            'continent_name' => $request->continent_name,
+            'description' => $request->description,
+        ]);
+        return new ContinentResource($data);
     }
 
     /**
@@ -75,6 +67,7 @@ class ContinentController extends Controller
      */
     public function destroy(Continent $continent)
     {
-        //
+        $continent->delete();
+        return response()->json(['message' => 'Continent deleted!']);
     }
 }
