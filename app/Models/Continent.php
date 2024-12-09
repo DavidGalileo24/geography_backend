@@ -10,7 +10,7 @@ class Continent extends Model
     use HasFactory;
 
     protected $fillable = [
-        'continent_name', 'description'
+        'continent_name', 'description',
     ];
 
     /*Relationships */

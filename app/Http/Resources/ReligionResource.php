@@ -16,8 +16,8 @@ class ReligionResource extends JsonResource
     {
         return [
             'id' => $this->id,
-           'religion_name' => $this->religion_name,
-           'description' => $this->description,
+            'religion_name' => $this->religion_name,
+            'description' => $this->description,
         ];
     }
 }

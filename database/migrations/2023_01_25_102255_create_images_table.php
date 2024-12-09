@@ -17,11 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('file');
             $table->morphs('imageable');
-<<<<<<< Updated upstream
             $table->string('category')->nullable();
-=======
-            $table->string('select_image')->nullable();
->>>>>>> Stashed changes
             $table->timestamps();
         });
     }

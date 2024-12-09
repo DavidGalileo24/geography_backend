@@ -10,7 +10,7 @@ class Currency extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'value', 'description'
+        'name', 'value', 'description',
     ];
 
     /*Relationships */
