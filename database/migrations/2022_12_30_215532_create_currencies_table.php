@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->decimal('value', 11, 2);
+            $table->string('symbol')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
         });

@@ -17,9 +17,9 @@ class ContinentController extends Controller
     public function index()
     {
         $data = Continent::orderBy('id', 'desc')->get();
+
         return ContinentResource::collection($data);
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -32,6 +32,7 @@ class ContinentController extends Controller
             'continent_name' => $request->continent_name,
             'description' => $request->description,
         ]);
+
         return new ContinentResource($data);
     }
 
@@ -45,7 +46,6 @@ class ContinentController extends Controller
         return ContinentResource::make($continent);
     }
 
-
     /**
      * Update the specified resource in storage.
      *
@@ -57,6 +57,7 @@ class ContinentController extends Controller
             'continent_name' => $request->continent_name,
             'description' => $request->description,
         ]);
+
         return new ContinentResource($data);
     }
 
@@ -68,6 +69,7 @@ class ContinentController extends Controller
     public function destroy(Continent $continent)
     {
         $continent->delete();
+
         return response()->json(['message' => 'Continent deleted!']);
     }
 }

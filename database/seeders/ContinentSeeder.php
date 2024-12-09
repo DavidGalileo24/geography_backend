@@ -19,12 +19,12 @@ class ContinentSeeder extends Seeder
             'Africa',
             'Europa',
             'Asia',
-            'Oceania'
+            'Oceania',
         ];
-        foreach ($cont as $item){
+        foreach ($cont as $item) {
             Continent::create([
                 'continent_name' => $item,
-                'description' => 'No description'
+                'description' => 'No description',
             ]);
         }
     }
