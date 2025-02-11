@@ -13,7 +13,7 @@ class Religion extends Model
         'religion_name', 'description',
     ];
 
-    /*Relationships */
+    /* Relationships */
     public function countries()
     {
         return $this->belongsToMany(Country::class);

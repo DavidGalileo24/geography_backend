@@ -13,13 +13,13 @@ class Continent extends Model
         'continent_name', 'description',
     ];
 
-    /*Relationships */
+    /* Relationships */
     public function country()
     {
         return $this->hasMany(Country::class);
     }
 
-    /*Pholimorphyc relationship */
+    /* Pholimorphyc relationship */
     public function images()
     {
         return $this->morphMany(Image::class, 'imageable');

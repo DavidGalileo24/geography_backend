@@ -13,7 +13,7 @@ class Currency extends Model
         'name', 'value', 'symbol', 'description',
     ];
 
-    /*Relationships */
+    /* Relationships */
     public function countries()
     {
         return $this->belongsToMany(Country::class);

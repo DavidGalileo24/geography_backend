@@ -10,21 +10,21 @@ class Country extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 
-        'total_population', 
-        'capital', 
-        'demonym',  
-        'latitude',  
-        'longitude',  
-        'numeric_code',  
-        'continent_id', 
-        'languaje_id', 
-        'religion_id', 
+        'name',
+        'total_population',
+        'capital',
+        'demonym',
+        'latitude',
+        'longitude',
+        'numeric_code',
+        'continent_id',
+        'languaje_id',
+        'religion_id',
         'currency_id',
         'description',
     ];
 
-    /*Inverse Relationships */
+    /* Inverse Relationships */
 
     public function continent()
     {
@@ -46,7 +46,7 @@ class Country extends Model
         return $this->belongsToMany(Currency::class, 'country_currency');
     }
 
-    /*Pholimorphyc relationship */
+    /* Pholimorphyc relationship */
     public function images()
     {
         return $this->morphMany(Image::class, 'imageable');
