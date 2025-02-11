@@ -10,7 +10,18 @@ class Country extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'total_population', 'capital', 'demonym', 'description', 'continent_id', 'languaje_id', 'religion_id', 'currency_id',
+        'name', 
+        'total_population', 
+        'capital', 
+        'demonym',  
+        'latitude',  
+        'longitude',  
+        'numeric_code',  
+        'continent_id', 
+        'languaje_id', 
+        'religion_id', 
+        'currency_id',
+        'description',
     ];
 
     /*Inverse Relationships */

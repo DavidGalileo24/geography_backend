@@ -19,11 +19,15 @@ return new class extends Migration
             $table->integer('total_population');
             $table->string('capital');
             $table->string('demonym');
-            $table->longText('description')->nullable();
+            $table->string('latitude');
+            $table->string('longitude');
+            $table->string('numeric_code');
             $table->foreignId('continent_id')->constrained();
             $table->foreignId('languaje_id')->constrained();
             $table->foreignId('religion_id')->constrained();
             $table->foreignId('currency_id')->constrained();
+            $table->longText('description')->nullable();
+
             $table->timestamps();
         });
     }

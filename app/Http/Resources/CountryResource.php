@@ -20,12 +20,15 @@ class CountryResource extends JsonResource
             'total_population' => $this->total_population,
             'capital' => $this->capital,
             'demonym' => $this->demonym,
-            'description' => $this->description,
+            'latitude' => $this->latitude,
+            'longitude' => $this->longitude,
+            'numeric_code' => $this->numeric_code,
             'continent' => new ContinentResource($this->continent),
             'languajes' => LanguajeResource::collection($this->languajes),
             'religions' => ReligionResource::collection($this->religions),
             'currencies' => CurrencyResource::collection($this->currencies),
             'map' => ImageResource::collection($this->images),
+            'description' => $this->description,
         ];
     }
 }
