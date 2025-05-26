@@ -11,8 +11,10 @@ class Country extends Model
 
     protected $fillable = [
         'name',
-        'total_population',
         'capital',
+        'flag',
+        'map',
+        'total_population',
         'demonym',
         'latitude',
         'longitude',

@@ -16,8 +16,10 @@ return new class extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('total_population');
             $table->string('capital');
+            $table->string('flag');
+            $table->string('map');
+            $table->integer('total_population');
             $table->string('demonym');
             $table->string('latitude');
             $table->string('longitude');
